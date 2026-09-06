@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom DOORS Engine v5.1 / v6.0</title>
+    <style>
+        body {
+            background-color: #1a1520; /* Matches your core game lobby theme */
+            color: #f0d090; /* Matrix soft-gold diagnostic text */
+            font-family: 'Courier New', Courier, monospace; 
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #ff00cc; /* Neon pink aesthetic text glow */
+            text-shadow: 0 0 10px rgba(255, 0, 204, 0.5);
+            margin-bottom: 5px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Clean 16:9 widescreen scaling */
+            height: 0;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 2px solid #2a2438;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .button-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .button-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 700px;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: block;
+            flex: 1;
+            min-width: 260px;
+            max-width: 300px;
+            margin: 10px;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: inherit;
+            color: #1a1520;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+        /* Style nodes matching game variations */
+        .btn-solo-web {
+            background-color: #00ffcc; /* Cyan for instant solo play */
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+        }
+        .btn-multi-web {
+            background-color: #bc13fe; /* Purple for multiplayer room launcher */
+            box-shadow: 0 0 10px rgba(188, 19, 254, 0.4);
+            color: #ffffff;
+        }
+        .btn-solo-apk {
+            background-color: #ff00cc; /* Magenta for stable mobile port */
+            box-shadow: 0 0 10px rgba(255, 0, 204, 0.4);
+        }
+        .btn-multi-apk {
+            background-color: #e60067; /* Dark magenta for multiplayer mobile package */
+            box-shadow: 0 0 10px rgba(230, 0, 103, 0.4);
+            color: #ffffff;
+        }
+        .instructions {
+            font-size: 12px;
+            color: #a19ba8;
+            margin-top: 40px;
+            line-height: 1.6;
+        }
+        .alert-text {
+            color: #ffcc00;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>👁 CUSTOM DOORS ENGINE 👁</h1>
+        <p>Phase 2 Story Update & Multiplayer Build Portfolio</p>
+        
+        <!-- Game Trailer Embedded Container -->
+        <div class="video-container">
+            <iframe src="https://youtube.com" title="DOORS: HTML EDITION TRAILER" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="button-section">
+            <h3>🌐 INSTANT BROWSER LAUNCHERS (PC/DESKTOP)</h3>
+            <div class="button-row">
+                <!-- Direct routing endpoints to dodge 404 validation errors -->
+                <a href="https://netlify.app" class="btn btn-solo-web">🌐 PLAY SOLO ENGINE (v5.1)</a>
+                <a href="https://netlify.app" class="btn btn-multi-web">🎮 PLAY MULTIPLAYER (v6.0)</a>
+            </div>
+
+            <h3>📲 MOBILE PACKAGE DOWNLOADS (ANDROID APK)</h3>
+            <p class="alert-text">⚠️ Bypass step: Replace the dummy targets below with your permanent copied GitHub Release download addresses!</p>
+            <div class="button-row">
+                <!-- Make sure to paste your real GitHub Release URLs here once uploaded to the binaries field! -->
+                <a href="YOUR_COPIED_SOLO_RELEASE_URL_HERE" download class="btn btn-solo-apk">📲 DOWNLOAD SOLO APK (33MB)</a>
+                <a href="YOUR_COPIED_MULTIPLAYER_RELEASE_URL_HERE" download class="btn btn-multi-apk">💥 DOWNLOAD MULTIPLAYER APK</a>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <p><strong>PC Default Controls:</strong> WASD Move | Mouse Look | Click Interact | C Crouch | G Drop Item | T Chat Window | M Toggle Mic</p>
+            <p><strong>Mobile Web Notice:</strong> Real-time voice chatting capabilities require secure HTTPS framework paths. When loading on mobile, ensure browser microphone system permissions are granted natively.</p>
+        </div>
+    </div>
+
+</body>
+</html>
